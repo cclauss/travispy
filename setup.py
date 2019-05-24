@@ -29,7 +29,7 @@ setup(
     name='TravisPy',
     version='0.3.5',
     packages=['travispy', 'travispy.entities'],
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*', !=3.4.*',
+    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*',
     install_requires=['requests'],
 
     # metadata for upload to PyPI
