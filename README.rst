@@ -1,4 +1,4 @@
-.. |travispy| replace:: **TravisPy**
+.. |travispy| replace:: **TravisPy** 
 .. |travisci| replace:: *Travis CI*
 .. |github| replace:: *GitHub*
 
