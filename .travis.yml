@@ -1,17 +1,16 @@
-sudo: false
+dist: xenial  # required for Python >= 3.7
 language: python
 python:
 - 2.7
-- 3.4
 - 3.5
 - 3.6
+- 3.7
 - pypy
 install:
-- pip install pytest
-- pip install pytest-rerunfailures
-- pip install requests
-- pip install coveralls
+- pip install --upgrade pip
+- pip install coveralls flake8 pytest pytest-rerunfailures requests
 script:
+- flake8 . --count --select=E9,F63,F72,F82 --show-source --statistics
 - coverage run --source=travispy setup.py test -a -rxs
 after_success:
 - coveralls
