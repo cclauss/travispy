@@ -2,7 +2,11 @@ from travispy import TravisPy
 from travispy.entities import Job, Log, Repo
 from travispy.errors import TravisError
 import pytest
-import sys
+
+try:
+    unicode_type = unicode  # Python 2
+except NameError:
+    unicode_type = str      # Python 3
 
 
 @pytest.fixture(scope='module')
@@ -203,7 +207,6 @@ def test_archived_log(travis):
 
     # Dynamically fetch the log
     assert log.body
-    unicode_type = unicode if sys.version_info[0] == 2 else str
     assert isinstance(log.body, unicode_type)
 
     job = log.job
