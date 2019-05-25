@@ -8,7 +8,7 @@ python:
 - pypy
 install:
 - pip install --upgrade pip
-- pip install coveralls flake8 pytest pytest-rerunfailures requests tox
+- pip install coveralls flake8 pytest requests tox  # pytest-rerunfailures
 script:
 - flake8 . --count --select=E9,F63,F72,F82 --show-source --statistics
 - coverage run --source=travispy setup.py test -a -rxs
